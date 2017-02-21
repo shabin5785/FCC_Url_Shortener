@@ -12,7 +12,9 @@ let obj = {};
 
 
 mongoose.Promise = bluebird;
-mongoose.connect("mongodb://localhost:27017/freecodecamp");
+
+let url = process.env.MONGOLAB_URI
+mongoose.connect(url);
 let connection = mongoose.connection;
 
 connection.on('error', console.error.bind(console, 'Connection Error : '));
