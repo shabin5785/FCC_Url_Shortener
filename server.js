@@ -13,7 +13,7 @@ let obj = {};
 
 mongoose.Promise = bluebird;
 
-let url = process.env.MONGOLAB_URI
+let url = "mongodb://shabin5785:2plus2@ds157439.mlab.com:57439/shabin_mongo";
 mongoose.connect(url);
 let connection = mongoose.connection;
 
